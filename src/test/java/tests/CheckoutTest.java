@@ -1,4 +1,4 @@
-package test;
+package tests;
 
 import org.example.CheckoutPage;
 import org.example.LoginPage;
@@ -15,8 +15,8 @@ public class CheckoutTest extends BaseTest {
 
         CheckoutPage cp = new CheckoutPage(driver);
         cp.addToCart();
-        cp.inputFirstName("test");
-        cp.inputLastName("test");
+        cp.inputFirstName("tests");
+        cp.inputLastName("tests");
         cp.inputPostalCode("123");
         cp.clickContinue();
         cp.clickFinish();
@@ -33,7 +33,7 @@ public class CheckoutTest extends BaseTest {
         CheckoutPage cp = new CheckoutPage(driver);
         cp.addToCart();
         cp.inputFirstName("");
-        cp.inputLastName("test");
+        cp.inputLastName("tests");
         cp.inputPostalCode("123");
         cp.clickContinue();
         cp.isErrorMessageDisplayed();
@@ -48,7 +48,7 @@ public class CheckoutTest extends BaseTest {
 
         CheckoutPage cp = new CheckoutPage(driver);
         cp.addToCart();
-        cp.inputFirstName("test");
+        cp.inputFirstName("tests");
         cp.inputLastName("");
         cp.inputPostalCode("123");
         cp.clickContinue();
@@ -64,13 +64,10 @@ public class CheckoutTest extends BaseTest {
 
         CheckoutPage cp = new CheckoutPage(driver);
         cp.addToCart();
-        cp.inputFirstName("test");
-        cp.inputLastName("test");
+        cp.inputFirstName("tests");
+        cp.inputLastName("tests");
         cp.inputPostalCode("");
         cp.clickContinue();
         cp.isErrorMessageDisplayed();
     }
-
-
-
 }

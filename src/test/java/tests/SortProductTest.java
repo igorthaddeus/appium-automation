@@ -1,4 +1,4 @@
-package test;
+package tests;
 
 import org.example.LoginPage;
 import org.example.SortProductPage;
@@ -15,7 +15,6 @@ public class SortProductTest extends BaseTest {
         loginPage.clickLoginButton();
 
         SortProductPage sp = new SortProductPage(driver);
-
         Assert.assertEquals(sp.sortDescedingProduct(), sp.priceProductValidateDescending());
     }
 }

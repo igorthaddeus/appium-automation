@@ -1,3 +1,5 @@
+package testComponent;
+
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.service.local.AppiumDriverLocalService;
 import io.appium.java_client.service.local.AppiumServiceBuilder;
@@ -8,21 +10,14 @@ import org.testng.annotations.BeforeMethod;
 import java.net.MalformedURLException;
 
 public class BaseTest {
-    AndroidDriver driver;
+    public AndroidDriver driver;
     private AppiumDriverLocalService service;
-
     @BeforeMethod
     public void setUp() throws MalformedURLException {
-
         service = new AppiumServiceBuilder()
                 .usingAnyFreePort()
                 .build();
         service.start();
-
-//        service = new AppiumServiceBuilder()
-//                .usingPort(4724)  // Ganti dengan port yang tidak digunakan
-//                .build();
-//        service.start();
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("platformName", "Android");
@@ -33,16 +28,8 @@ public class BaseTest {
         capabilities.setCapability("appPackage", "com.swaglabsmobileapp");
         capabilities.setCapability("appActivity", "com.swaglabsmobileapp.MainActivity");
 
-//        driver = new AndroidDriver(new URL("http://127.0.0.1:4723/wd/hub"), capabilities);
         driver = new AndroidDriver(capabilities);
-//        driver = new AndroidDriver(new URL(service.getUrl().toString()), capabilities);
-//        AndroidDriver driver = new AndroidDriver(new URL("http://localhost:4723/wd/hub"), capabilities);
-
-
-//        driver = new AndroidDriver(new URL(service.getUrl().toString()), capabilities);
-
     }
-
     @AfterMethod
     public void closeSession(){
         if(driver != null){
