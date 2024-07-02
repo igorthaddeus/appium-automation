@@ -6,6 +6,7 @@ import org.testng.annotations.Test;
 import testComponent.BaseTest;
 
 public class CheckoutTest extends BaseTest {
+
     @Test(priority = 1)
     public void successCheckout() {
         LoginPage loginPage = new LoginPage(driver);

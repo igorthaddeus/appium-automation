@@ -36,6 +36,6 @@ public class LoginSteps extends BaseTest {
     @Then("User in on home page")
     public void user_in_home_page() {
         loginPage.textProductIsDisplayed();
-//        super.closeSession();
+        super.closeSession();
     }
 }

@@ -10,8 +10,10 @@ import org.testng.annotations.BeforeMethod;
 import java.net.MalformedURLException;
 
 public class BaseTest {
+
     public AndroidDriver driver;
     private AppiumDriverLocalService service;
+
     @BeforeMethod
     public void setUp() throws MalformedURLException {
         service = new AppiumServiceBuilder()

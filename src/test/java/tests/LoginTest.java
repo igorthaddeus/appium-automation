@@ -5,6 +5,7 @@ import org.testng.annotations.Test;
 import testComponent.BaseTest;
 
 public class LoginTest extends BaseTest {
+
     @Test(priority = 1)
     public void successLogin() {
         LoginPage loginPage = new LoginPage(driver);

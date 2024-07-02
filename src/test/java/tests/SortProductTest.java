@@ -7,6 +7,7 @@ import org.testng.annotations.Test;
 import testComponent.BaseTest;
 
 public class SortProductTest extends BaseTest {
+
     @Test
     public void successSortProduct(){
         LoginPage loginPage = new LoginPage(driver);
